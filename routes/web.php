@@ -17,7 +17,8 @@ Route::get('wellcome', function () {
 });
 
 
-Route::get('/' , 'Requests@call');
+Route::get('call' , 'Requests@call')->middleware('VerifyBot');
+Route::post('call' , 'Requests@call');
 Route::get('e' , 'Requests@calle');
 Route::get('setup' , 'Home@setup');
 Route::get('input' , 'Home@input');
